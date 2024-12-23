@@ -1,0 +1,117 @@
+/* Reset básico */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo general */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+/* Cabecera */
+header {
+    background-image: url('../img/reyes.jpg'); /* Ruta de tu imagen navideña */
+    background-size: cover; /* Asegura que la imagen cubra todo el ancho */
+    background-position: center; /* Centra la imagen */
+    color: white; /* Texto blanco para contraste */
+    text-align: center;
+    padding: 50px 20px; /* Espaciado interno para el texto */
+    position: relative; /* Para superponer el texto correctamente */
+  }
+  
+  /* Fondo semitransparente para el texto */
+  header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Filtro oscuro semitransparente */
+    z-index: 1;
+  }
+  
+  /* Estilo del texto dentro del header */
+  header h1, header h2 {
+    position: relative; /* Para superponer el texto sobre el fondo */
+    z-index: 2;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejorar legibilidad */
+  }
+  
+  /* Sección de regalos */
+  main {
+    padding: 20px;
+  }
+  
+  section.regalos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  article.regalo {
+    background: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  article.regalo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Imagen del regalo dentro del enlace */
+  article.regalo a img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.2s ease;
+  }
+  
+  article.regalo a img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Título del regalo */
+  article.regalo h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  /* Botón de comprar */
+  article.regalo a.boton {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #303b49;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  article.regalo a.boton:hover {
+    background: #09182b;
+  }
+  
+  /* Pie de página */
+  footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 1em 0;
+    margin-top: 20px;
+  }
+  
